@@ -1,4 +1,6 @@
-﻿namespace AppTask_ToDoList
+﻿using AppTask_ToDoList.Views;
+
+namespace AppTask_ToDoList
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new StartPage());
         }
     }
 }
