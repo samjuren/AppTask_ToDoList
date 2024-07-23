@@ -4,5 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
     xmlns:local="using:AppTask_ToDoList.WinUI">
-
+    <maui:MauiWinUIApplication.Resources>
+        <ResourcesDictonary>
+            <Style TargetType="TextBox">
+                <Setter Property="BorderThickness" Value="0"></Setter>
+            </Style>
+        </ResourcesDictonary>
+    </maui:MauiWinUIApplication.Resources>
 </maui:MauiWinUIApplication>

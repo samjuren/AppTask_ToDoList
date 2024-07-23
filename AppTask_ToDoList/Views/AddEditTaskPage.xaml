@@ -15,7 +15,10 @@
             <Button 
                 HorizontalOptions="End"
                 Text="X"
-                Clicked="CloseModal"/>
+                Clicked="CloseModal"
+                Padding="0"
+                MinimumHeightRequest="31"
+                MinimumWidthRequest="31"/>
 
             <Entry
                 Placeholder="Tarefa"/>
@@ -34,7 +37,10 @@
                 <Button 
                     Text="+"
                     HorizontalOptions="EndAndExpand"
-                    Clicked="AddStep"/>
+                    Clicked="AddStep"
+                    Padding="0"
+                    MinimumHeightRequest="31"
+                    MinimumWidthRequest="31"/>
             </StackLayout>
             <Grid 
                 ColumnDefinitions="30,*,30">

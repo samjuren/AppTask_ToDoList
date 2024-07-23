@@ -16,7 +16,7 @@
             TextColor="{StaticResource Gray400}"/>
 
         <Button 
-            Text="+   Adicionar tarefa"
+            Text="+   Adicionar Tarefa"
             Grid.Row="1"
             HorizontalOptions="Center"
             VerticalOptions="End"
