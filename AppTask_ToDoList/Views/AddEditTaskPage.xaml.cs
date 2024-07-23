@@ -6,4 +6,19 @@ public partial class AddEditTaskPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void CloseModal(object sender, EventArgs e)
+    {
+		Navigation.PopModalAsync();
+    }
+
+    private void SaveData(object sender, EventArgs e)
+    {
+        Navigation.PopModalAsync();
+    }
+
+    private async void AddStep(object sender, EventArgs e)
+    {
+        var stepName = await DisplayPromptAsync("Etapa", "Digite o nome da Etapa (subtarefa): ", "Adicionar", "Cancelar");
+    }
 }

@@ -3,10 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppTask_ToDoList.Views.AddEditTaskPage"
              Title="AddEditTaskPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <BoxView 
+            HeightRequest="5" 
+            Color="{StaticResource Black}" 
+            VerticalOptions="Start"/>
+
+        <VerticalStackLayout 
+            Padding="15">
+
+            <Button 
+                HorizontalOptions="End"
+                Text="X"
+                Clicked="CloseModal"/>
+
+            <Entry
+                Placeholder="Tarefa"/>
+
+            <Editor 
+                Placeholder="Descrição"/>
+
+            <DatePicker />
+
+            <StackLayout 
+                Orientation="Horizontal">
+                <Label 
+                    Text="Etapas (Subtarefas)"                    
+                    VerticalOptions="Center"/>
+
+                <Button 
+                    Text="+"
+                    HorizontalOptions="EndAndExpand"
+                    Clicked="AddStep"/>
+            </StackLayout>
+            <Grid 
+                ColumnDefinitions="30,*,30">
+                <CheckBox />
+                <Label 
+                    Text="Etapa"
+                    Grid.Column="1"
+                    VerticalOptions="Center"/>
+                <Label 
+                    Text="Trash"
+                    Grid.Column="2"
+                    VerticalOptions="Center"/>
+            </Grid>
+        </VerticalStackLayout>
+        <Button 
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            Margin="15"
+            Text="Salvar"
+            Clicked="SaveData"/>
+    </Grid>
 </ContentPage>
