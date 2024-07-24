@@ -2,11 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppTask_ToDoList.Views.StartPage"
-             Title="StartPage">
+             Title="StartPage"
+             NavigationPage.HasNavigationBar="False">
     <Grid RowDefinitions="70,*">
-        <Entry 
+        <Border
             Margin="20,20,20,0"
-            Placeholder="Pesquisar..."/>
+            BackgroundColor="#F7F7F7"
+            HeightRequest="50"
+            StrokeShape="RoundRectangle 25">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Border.GestureRecognizers>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    Margin="7,-2, 0,0"
+                    Source="find.png"
+                    WidthRequest="33"
+                    HeightRequest="33"
+                    BackgroundColor="#F7F7F7"/>
+                <Entry                
+                    Margin="0,1,0,0"
+                    x:Name="Entry_Seach"
+                    Placeholder="Pesquisar..."
+                    HorizontalOptions="FillAndExpand"
+                    PlaceholderColor="#A8A8A8"/>
+            </StackLayout>
+        </Border>
 
         <Label 
             Text="O que você deseja fazer?"
