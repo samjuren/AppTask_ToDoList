@@ -1,5 +1,4 @@
 ﻿using SQLite;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppTask_ToDoList.Models
 {
@@ -16,7 +15,6 @@ namespace AppTask_ToDoList.Models
         public DateTime Updated { get; set; }
         public bool IsCompleted { get; set; }
 
-        [ForeignKey(nameof(TaskModel))]
         public List<SubTaskModel> SubTasks { get; set; } = new List<SubTaskModel>();
     }
 }
