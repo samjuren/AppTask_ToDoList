@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using AppTask_ToDoList.DbContext;
+using Microsoft.Extensions.Logging;
 
 namespace AppTask_ToDoList
 {
@@ -6,6 +7,8 @@ namespace AppTask_ToDoList
     {
         public static MauiApp CreateMauiApp()
         {
+            CreateDatabase();
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
@@ -20,6 +23,11 @@ namespace AppTask_ToDoList
 #endif
 
             return builder.Build();
+        }
+
+        private static void CreateDatabase()
+        {
+            Database.Init();
         }
     }
 }
